@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Core SEO Tags -->
     <title>{{ page.title }} | {{ site.name }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="Huckleberry Thums">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph (For clean link previews on LinkedIn/Socials) -->
+    <meta property="og:title" content="{{ page.title }} | {{ site.name }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:type" content="profile">
+
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 </head>
 <body>
