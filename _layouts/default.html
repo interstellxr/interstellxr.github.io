@@ -1,29 +1,42 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-	        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.name }}</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+</head>
+<body>
+
+    <header>
+        <nav class="nav-container">
+            <a href="/" class="nav-logo">{{ site.name }}</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/cv">CV</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        {{ content }}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.name }}</p>
+            <ul class="footer-socials">
+                <li><a href="mailto:{{ site.email }}">Email</a></li>
+                <li><a href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank">LinkedIn</a></li>
+                {% if site.orcid %}
+                <li><a href="https://orcid.org/{{ site.orcid }}" target="_blank">ORCID</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

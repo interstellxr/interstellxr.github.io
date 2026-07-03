@@ -1,8 +1,70 @@
 ---
 layout: default
-title: Huckleberry Thums
+title: Home
 ---
-<div class="blurb">
-	<h1>Website of Huckleberry Thums</h1>
-	<p>Email: hucklethums@icloud.com <a href="/about">Read more about my life...</a></p>
-</div><!-- /.blurb -->
+
+<div class="hero-banner">
+    <div class="cosmic-illustration" aria-hidden="true">
+        <div class="vector-star giant-star"></div>
+        <div class="vector-star mini-star-1"></div>
+        <div class="vector-star mini-star-2"></div>
+        <div class="vector-planet"></div>
+</div>
+	<div class="profile-hero">
+	    <div class="hero-text">
+	        <h1>Hi, I'm Huckleberry Thums (MSc)</h1>
+	        <p class="subtitle">Astrophysics Master's Student & Planetary Atmospheres Researcher</p>
+	        <p>
+	            I am interested in (exo)planetary atmospheres and the search for life in space in general. I work with both observational data and numerical models. Currently, I am investigating the thermal structure of Triton, at Paris Observatory (Meudon).
+	        </p>
+	        <div class="badge-container">
+	            <a href="mailto:{{ site.email }}" class="badge badge-email">Email</a>
+	            <a href="https://github.com/{{ site.github_username }}" class="badge badge-github" target="_blank">GitHub</a>
+	            <a href="https://linkedin.com/in/{{ site.linkedin_username }}" class="badge badge-linkedin" target="_blank">LinkedIn</a>
+	            {% if site.orcid %}
+	            <a href="https://orcid.org/{{ site.orcid }}" class="badge badge-orcid" target="_blank">ORCID</a>
+	            {% endif %}
+	        </div>
+	    </div>
+	</div>
+</div>
+<hr class="section-divider">
+
+<section class="research-grid-section">
+    <h2>Research Focus Areas</h2>
+    <div class="research-grid">
+        <div class="grid-card">
+            <h3>Rocky Exoplanet Characterization</h3>
+            <p>In October 2026, I will start my PhD at the CEA/LMD labs in Paris. There, I will be utilizing high-precision James Webb Space Telescope (JWST) observations to investigate the atmospheric compositions, if any, of rocky exoplanets.</p>
+        </div>
+        <div class="grid-card">
+            <h3>Icy Moons & Outer Solar System Climates</h3>
+            <p>At the moment I am completing my Master's thesis. I am working with a novel radiative-microphysical model to analyze Triton's atmosphere.</p>
+        </div>
+        <div class="grid-card">
+            <h3>High-Resolution Spectroscopy</h3>
+            <p>In autumn 2025 I had the pleasure of carrying out an internship at Geneva Observatory, where I worked on exoplanetary atmospheres via ground-based, high-resolution transmission spectroscopy. I gained experience in processing high-fidelity archival spectra (such as ESPRESSO data) to extract atomic lines like Lithium in the atmospheres of hot Jupiters.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<section class="updates-section">
+    <h2>Recent Updates</h2>
+    <ul class="updates-list">
+        {% if site.posts.size > 0 %}
+            {% for post in site.posts limit:3 %}
+            <li>
+                <span class="update-date">{{ post.date | date: "%b %d, %Y" }}</span>
+                <a href="{{ post.url }}" class="update-link">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+        {% else %}
+            <li>
+                <span class="update-date">July 2026</span>
+                <span class="update-text">Launching my updated portfolio, research hub, and academic website profile. Stay tuned.</span>
+            </li>
+        {% endif %}
+    </ul>
+</section>

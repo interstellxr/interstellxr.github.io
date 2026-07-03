@@ -1,2 +1,18 @@
 name: Huckleberry Thums
+title: Huckleberry Thums | Astrophysics Researcher
+description: Master's Student in Astrophysics at EPFL, currently working at the Observatoire de Paris (LIRA).
+url: "https://interstellxr.github.io"
 markdown: kramdown
+
+# Social & Academic Profiles
+email: hucklethums@icloud.com
+github_username: interstellxr
+linkedin_username: huckleberry-thums
+orcid: "0009-0004-5856-5650"             # Add your ORCID identifier here when ready
+work_address: "Paris Observatory - LIRA, Building 17, 5, place Jules Janssen 92195 MEUDON Cedex, France"      # Add your institute/office address here if desired
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
